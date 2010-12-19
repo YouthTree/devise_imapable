@@ -9,7 +9,7 @@ Devise::Schema.class_eval do
       null = options[:null] || false
       default = options[:default] || ""
 
-      apply_schema :email, String, :null => null, :default => default
+      apply_devise_schema :email, String, :null => null, :default => default
     end
 
 end
