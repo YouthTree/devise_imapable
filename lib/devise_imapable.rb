@@ -16,6 +16,11 @@ module Devise
   # imap server to use SSL?
   mattr_accessor :imap_server_use_ssl
   @@imap_server_use_ssl = false
+  
+  # an optional proxy to use when you want to validate an email address.
+  mattr_accessor :imap_email_validator
+  @@imap_email_validator = nil
+  
 end
 
 # Add +:imap_authenticatable+ strategy to defaults.

@@ -80,8 +80,10 @@ In initializer  `config/initializers/devise.rb` :
 
     Devise.setup do |config|
       # ...
-      config.imap_server = 'bigcorporation.com'
-      config.default_email_suffix = 'friendly-corporation.com'
+      config.imap_server               = 'bigcorporation.com'
+      config.imap_default_email_suffix = 'friendly-corporation.com'
+      config.imap_server_use_ssl       = true
+      config.imap_email_validator      = lambda { |e| EmailWhitelist.exists? :email => e }
       # ...
     end
 

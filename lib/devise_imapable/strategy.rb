@@ -6,7 +6,6 @@ module Devise
     class ImapAuthenticatable < Authenticatable
       def authenticate!
         resource = mapping.to.find_for_imap_authentication(authentication_hash)
-
         if validate(resource){ resource.valid_password?(password) }
           resource.after_imap_authentication
           success!(resource)

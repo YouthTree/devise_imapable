@@ -43,6 +43,10 @@ module Devise
             end
           end
           
+          # Check the email validator.
+          email_validator = Devise.imap_email_validator
+          return if email_validator.present? && !email_validator.call(conditions[:email])
+          
           # Find or create
           find_for_authentication(conditions) || new(conditions)
         end

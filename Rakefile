@@ -32,7 +32,7 @@ begin
     gemspec.email = "josh.kalderimis@gmail.com"
     gemspec.homepage = "http://github.com/joshk/devise_imapable"
     gemspec.authors = ["Josh Kalderimis","Louis St-Amour"]
-    gemspec.add_runtime_dependency "devise", "> 1.0.4"
+    gemspec.add_runtime_dependency "devise", "~> 1.2.0"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
